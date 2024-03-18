@@ -1,0 +1,41 @@
+SOLUTION 1
+
+fn greet(name: &str) -> String {
+    format!("Hello, {}!", name)
+}
+ 
+SOLUTION 2
+
+fn reverse_string(text: &str) -> String {
+    text.chars().rev().collect()
+}
+
+SOLUTION 3
+
+fn get_first_character(text: &str) -> Option<char> {
+    if let Some(first_char) = text.chars().next() {
+        Some(first_char)
+    } else {
+        None
+    }
+}
+
+SOLUTION 4
+
+fn get_day_type(day: u8) -> &str {
+    match day {
+        1 | 7 => "Weekend",
+        2..=6 => "Weekday",
+        _ => "Invalid Day",
+    }
+}
+
+SOLUTION 5
+
+fn find_max(data: &Vec<i32>) -> Option<i32> {
+    if let Some(&max_value) = data.iter().max() {
+        Some(max_value)
+    } else {
+        None
+    }
+}
